@@ -73,21 +73,29 @@ def main():
             opcao = int(input("Digite o número correspondente à opção desejada: "))
             match opcao: 
                 case 1:
+                    os.system("cls || clear")
                     cadastrar_usuario()
-            
+                    input("Pressione uma tecla para exibir o menu novamente.")
 
                 case 2:
+                    os.system("cls || clear")
                     consultar_usuario()
-
+                    input("Pressione uma tecla para exibir o menu novamente.")
 
                 case 3:
+                    os.system("cls || clear")
                     atualizar_cadastro()
+                    input("Pressione uma tecla para exibir o menu novamente.")
                 
                 case 4:
+                    os.system("cls || clear")
                     excluir_cadastro()
+                    input("Pressione uma tecla para exibir o menu novamente.")
 
                 case 5:
+                    os.system("cls || clear")
                     listar_usuarios()
+                    input("Pressione uma tecla para exibir o menu novamente.")
                 case 0:
                     print(f"Encerrando o sistema")
                     break
