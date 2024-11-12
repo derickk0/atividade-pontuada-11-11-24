@@ -1,27 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-from models.usuario_models import Usuario
-from repositories.usuario_repositories import UsuarioRepository
+from app.models.usuario_models import Usuario
+from app.repositories.usuario_repositories import UsuarioRepository
 
 class UsuarioService:
     def __init__(self, repository: UsuarioRepository):

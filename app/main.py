@@ -63,7 +63,6 @@ def main():
                 print(f"{usuario.id} - {usuario.nome} - {usuario.email} - {usuario.senha}")
         
     while True:
-        #Solicitando dados para o usuario.
             print(f"\n== Tabela de serviços disponiveis ==")
             print(f"1- Cadastrar Usuário")
             print(f"2- Consultar cadastro")
@@ -90,12 +89,10 @@ def main():
                 case 5:
                     listar_usuarios()
                 case 0:
-                    print(f"Saindo do sistema...")
+                    print(f"Encerrando o sistema")
                     break
                 case _:
-                    print(f"Tente novamente..")
-
-
+                    print(f"Tente novamente")
 
 if __name__ == "__main__":
     main()
