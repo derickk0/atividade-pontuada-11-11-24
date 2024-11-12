@@ -33,10 +33,10 @@ def main():
                 print(f"{usuario.id} - {usuario.nome} - {usuario.email} - {usuario.senha}")
 
             else:
-                print(f"Usuario nao encontrado.")
+                print(f"Usuario não encontrado.")
 
     def atualizar_cadastro():
-            email_usuario = input(f"Digite o email do usuario: ")
+            email_usuario = input(f"Digite o email do usuário: ")
             usuario = session.query(Usuario).filter_by(email = email_usuario).first()
             if usuario:
                 usuario.nome = input(f"Digite o nome: ")
@@ -45,17 +45,17 @@ def main():
                 session.commit()
 
             else:
-                print(f"Cliente nao encontrado")
+                print(f"Cliente não encontrado")
 
     def excluir_cadastro():
-            email_usuario = input(f"Digite o email do usuario: ")
+            email_usuario = input(f"Digite o email do usuário: ")
             usuario = session.query(Usuario).filter_by(email = email_usuario).first()
             if usuario:
                 session.delete(usuario)
                 session.commit()
-                print(f"Usuario {usuario.nome} excluido com sucesso!")
+                print(f"Usuário {usuario.nome} deletado com sucesso!")
             else:
-                print(f"Cliente nao encontrado")
+                print(f"Cliente não encontrado")
 
     def listar_usuarios():
         listar_usuario = service.listar_todos_usuario()
@@ -64,13 +64,13 @@ def main():
         
     while True:
             print(f"\n== Tabela de serviços disponiveis ==")
-            print(f"1- Cadastrar Usuário")
+            print(f"1- Cadastrar usuário")
             print(f"2- Consultar cadastro")
-            print(f"3- Atualizar Usuário")
-            print(f"4- Excluir Usuário")
-            print(f"5- Listar Usuário")
+            print(f"3- Atualizar usuário")
+            print(f"4- Excluir usuário")
+            print(f"5- Listar usuários")
             print(f"0- Sair")
-            opcao = int(input("Digite a opção desejada: "))
+            opcao = int(input("Digite o número correspondente à opção desejada: "))
             match opcao: 
                 case 1:
                     cadastrar_usuario()
